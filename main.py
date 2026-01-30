@@ -1,5 +1,5 @@
 #сумма двух целых чисел
-def get_sum (a:int, b: int):
+def get_sum (a, b):
     return a + b
 
 #print(get_sum(2,3))
@@ -16,6 +16,26 @@ def count_capital_letters(text):
     return count
 
 
-count_capital_letters("Hello, World!")
-count_capital_letters("    A   ")
+#count_capital_letters("Hello, World!")
+#count_capital_letters("    A   ")
+
+#Написать функцию decode_string, которая в качестве параметра принимает строку и возвращает преобразованную строку так, чтобы каждый 
+# символ в новой строке был «(» если этот символ встречается только один раз в исходной строке, или «)» если он встречается более одного раза. 
+# При определении дубликатов не учитывать регистр букв.
+
+def decode_string(text):
+    text_lower = text.lower()
+    result = ""
+
+    for char in text:
+        if text_lower.count(char.lower()) == 1:
+            result += "("
+        else:
+            result += ")"
+    return result
+
+#print(decode_string("din"))
+#print(decode_string("recede"))
+#print(decode_string("Success"))
+#print(decode_string("(( @"))
        
